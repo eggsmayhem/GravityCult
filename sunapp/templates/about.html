@@ -1,0 +1,46 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GC</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+ 
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h4>Poetry 4 the Park</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/index">Submit a Poem</a></li>
+            <li><a href="/about">About P4P</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+   
+<div id="container">
+<div class="textbox">
+<h1>About Poetry 4 the Park</h1>    
+
+<p>Poetry 4 the Park is an interactive popup website. Art portals are created around the world, and when you 
+    find one, you are invited to submit your poetry, art, and images, and to view the work of others! It doesn't 
+    even need to rhyme, it just needs to be from the heart! Keep it anonymous, or link to your social websites
+    to meet other artists in your area!
+</p>
+
+</div>
+</div>
+
+</body>
+<script src="{% static 'script.js' %}"></script> 
+</html>
