@@ -25,18 +25,22 @@
             <div class="line3"></div>
         </div>
     </nav>
+    
     {% csrf_token %}
     {{ form.as_p }}
-{% for image in images %}
-<div id="container">
-<div class="textbox">
+    {% for image in images %}
+        <div id="container">
+        <div class="textbox">
     
-<h1>{{ image.title }}</h1>
-<h2>{{ image.author }}</h2>
+        <h1>{{ image.title }}</h1>
+        <h2>{{ image.author }}</h2>
 
 <!--changed 'body' to 'piccont' can probably move this max-height to style.css if I put a clas within this image tag-->
 <div class="piccont">
+    {% if image.image %}
     <img src='{{ image.image.url }}' style="max-height:200px;max-width:300px">
+    {% endif %}
+    
 </div>
 <div> {{ image.content | safe }}</div>
 

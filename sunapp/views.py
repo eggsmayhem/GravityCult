@@ -11,7 +11,7 @@ def index(request):
         if form.is_valid():
             form.save()
             # Get the current instance object to display in the template
-            img_obj = form.instance
+            #img_obj = form.instance
             #return render(request, 'index.html', {'form': form, 'img_obj': img_obj})
             return redirect('/home')
     else:
