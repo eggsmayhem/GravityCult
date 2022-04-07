@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os 
 
+# added to load secret keys
+
+from dotenv import load_dotenv
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,10 +26,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-tg79-q%s@+eqy%5o%97!+6a^*eb=vj4^-b%pgeupq4368529rk'
-
+# SECRET_KEY = 'django-insecure-tg79-q%s@+eqy%5o%97!+6a^*eb=vj4^-b%pgeupq4368529rk'
+# SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
+SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
+
 
 ALLOWED_HOSTS = []
 
@@ -47,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'sunapp',
     'ckeditor',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +148,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'media'
+STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
+
+
+AWS_ACCES_KEY_ID = str(os.getenv('AWS_ACCES_KEY_ID'))
+AWS_SECRET_ACCESS_KEY = str(os.getenv('AWS_SECRET_ACCESS_KEY'))
+AWS_STORAGE_BUCKET_NAME = str(os.getenv('AWS_STORAGE_BUCKET_NAME'))
+
+#set overwrite to false so a user uploading an image with a non-unique name doesn't over-write the previous image 
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None 
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'

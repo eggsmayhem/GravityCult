@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: sienna;
+}
 
 #container {
     display:flex;
@@ -11,10 +14,14 @@
     flex-wrap:wrap;
     flex-direction:column;
     align-items: center;
-    border: 5px solid salmon;
+    /* border: 5px solid salmon; */
     
 
 }
+
+/* .textbox h3 { */
+    /* text-align: center; */
+/* } */
 
 /*#postcontainer {
     display:flex;
@@ -28,15 +35,15 @@
     width:51%; 
     margin-top: 20px;
     /*background-color: hsl(266, 91%, 95%);*/
-    background-color: seagreen;
-    padding:10px;
+    background-color: rgb(163, 109, 38);
+    padding:20px;
     border-radius: 25px;
     display:flex;
     justify-content:center;
     flex-direction:column;
     flex-wrap:wrap;
     align-items: center;
-    border: 5px solid salmon;
+    /* border: 5px solid salmon; */
 
 }
 
@@ -46,7 +53,7 @@
     height:auto;
     width:auto;
     margin-top: 40px;
-    border: 5px solid salmon;
+    /* border: 5px solid salmon; */
     
 }
 
@@ -58,7 +65,7 @@ img {
 .imgcont {
     max-height:50%;
     max-width:50%;
-    border: 5px solid salmon;
+    border: 5px solid black;
 }
 
 .text {
@@ -111,6 +118,22 @@ nav{
     transition: all 0.3s ease;
 }
 
+/* below is attempt to resize giant google translate banner lol
+#google_translate_element {
+    max-height: 25px !important;
+    max-width: 100px;
+} */
+
+/* logo height on standard page top */
+.main-logo {
+    height: 50px;
+}
+
+/* attempt to resize videos on /home/ */
+
+/* .vidya {
+    max-width: 100%;
+} */
 
 @media screen and (max-width:1024px){
     .nav-links{
@@ -147,7 +170,7 @@ nav{
     .textbox {
         width:90%;
         margin-top: 20px;
-        background-color: hsl(266, 91%, 95%);
+        background-color: rgb(163, 109, 38);
         padding:10px;
         text-align:justify;
         border-radius: 25px;
@@ -156,6 +179,7 @@ nav{
     }
     
 }
+
 
 .nav-active{
     transform:translateX(0%);
@@ -180,5 +204,15 @@ nav{
 }
 .toggle .line3{
     transform:rotate(45deg) translate(-5px,-6px);
+}
+
+.intro {
+    width: 90%;
+    background-color: salmon;
+    padding: 0 10%;
+    margin: 0 10%;
+    color: white !important;
+    /* height: 80px; */
+    /* test */
 }
 

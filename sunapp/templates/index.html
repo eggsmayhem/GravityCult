@@ -16,12 +16,13 @@
 <body>
   <nav>
     <div class="logo">
-        <h4>Poetry 4 the Park</h4>
+      <a href="/home"><img src="{% static '/assets/gravcropped.png' %}" alt="Gravity Cult logo" class="main-logo"></a>
     </div>
     <ul class="nav-links">
         <li><a href="/home">Home</a></li>
-        <li><a href="/index">Submit a Poem</a></li>
-        <li><a href="/about">About P4P</a></li>
+        <li><a href="/index">Submit</a></li>
+        <li><a href="/about">About GC</a></li>
+        <li><a href="/map">Map of Portals</a></li>
     </ul>
     <div class="burger">
         <div class="line1"></div>
@@ -34,23 +35,23 @@
   
   <div class='textbox'>
     <h1>Submit Your Art!</h1>
-    <h3>To submit a youtube video, click 'Source' below and paste the embed link from Youtube!
-      <br>For images from your phone, just click "Browse..."
-      <br>Otherwise, just type your thoughts into the space below!
+    <h3>
+      <br>Upload images of nature/life around your portal with "Browse..."
+      <br>Type your poetry into the space below!
     </h3>
 <!--<p><h4>pip install Pillow</h4></p>-->
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
   {{ form.as_p }}
-  <button type="submit">Submit</button>
+  <button type="submit" class="sub-button">Submit</button>
 </form>
 </div>
 </div>
-<!--
+
 {% if img_obj %}
   <h3>Succesfully uploaded : {{img_obj.title}}</h3>
   <img src="{{ img_obj.image.url}}" alt="connect" style="max-height:300px">
 {% endif %}
 </body>
 <script src="{% static 'script.js' %}"></script> 
-</html>-->
+</html>

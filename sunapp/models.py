@@ -3,7 +3,13 @@ from django.db import models
 #added for ck
 from ckeditor.fields import RichTextField 
 
+PARK_CHOICES = (
+    ('Difficult Run, Virginia', 'Difficult Run, Virginia'),
+    ('Reston', 'Reston'),
+)
+
 class Image(models.Model):
+    location = models.CharField(max_length=40, choices=PARK_CHOICES, default='Reston')
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200, default="anonymous")
     image = models.ImageField(upload_to='images', blank=True)

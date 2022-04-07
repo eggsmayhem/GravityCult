@@ -44,6 +44,8 @@ body {
     flex-wrap:wrap;
     align-items: center;
     /* border: 5px solid salmon; */
+    border: 5px solid salmon;
+    box-shadow: 12px 12px 2px 1px rgba(133, 15, 15, 0.38);
 
 }
 
@@ -79,6 +81,8 @@ nav{
     background-color: hsl(266, 21%, 50%);
     /*background-color:transparent;*/
     font-family: sans-serif;
+    /* box-shadow: 12px 12px 2px 1px rgba(44, 48, 109, 0.38); */
+    border: 5px solid rgb(94, 16, 94); 
 }
 
 .logo {
@@ -92,6 +96,7 @@ nav{
     display:flex;
     justify-content:space-around;
     width: 40%;
+    border: 5px solid rgb(94, 16, 94);
 }
 
 .nav-links li {
@@ -118,6 +123,22 @@ nav{
     transition: all 0.3s ease;
 }
 
+/* below is attempt to resize giant google translate banner lol
+#google_translate_element {
+    max-height: 25px !important;
+    max-width: 100px;
+} */
+
+/* logo height on standard page top */
+.main-logo {
+    height: 50px;
+}
+
+/* attempt to resize videos on /home/ */
+
+/* .vidya {
+    max-width: 100%;
+} */
 
 @media screen and (max-width:1024px){
     .nav-links{
@@ -158,11 +179,13 @@ nav{
         padding:10px;
         text-align:justify;
         border-radius: 25px;
-        border: 5px solid salmon;
+        /* border: 5px solid salmon; */
+        box-shadow: 12px 12px 2px 1px rgba(133, 15, 15, 0.38);
     
     }
     
 }
+
 
 .nav-active{
     transform:translateX(0%);
@@ -189,3 +212,30 @@ nav{
     transform:rotate(45deg) translate(-5px,-6px);
 }
 
+.intro {
+    width: 90%;
+    background-color: rgba(8, 187, 172, 0.38); 
+    padding: 1em;
+    margin: 3% 3% 0 3%;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid rgb(121, 73, 121);
+    text-align: center;
+    /* height: 80px; */
+    /* test */
+    box-shadow: 12px 12px 2px 1px rgba(15, 23, 131, 0.38);
+}
+
+.sub-button {
+    background-color: rgb(65, 38, 65);
+    color: white;
+    margin-left: 45%;
+    margin-top: 2%;
+    height:30px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.textbox h3 {
+    margin-bottom: 1em;
+}
