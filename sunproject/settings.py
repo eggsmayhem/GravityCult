@@ -30,11 +30,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
+DEBUG = True
+# Used the below with a debug = true in the .env file, but it was still being deployed in debug mode on heroku
+# DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gravitycult.herokuapp.com']
 
 #below added to center ckeditor on submission page/index
 CKEDITOR_CONFIGS = {
