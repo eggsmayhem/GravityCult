@@ -6,10 +6,11 @@ from ckeditor.fields import RichTextField
 PARK_CHOICES = (
     ('Difficult Run, Virginia', 'Difficult Run, Virginia'),
     ('Reston', 'Reston'),
+    ('Cherry Blossum Tree, D.C.', 'Cherry Blossum Tree, D.C.',)
 )
 
 class Image(models.Model):
-    location = models.CharField(max_length=40, choices=PARK_CHOICES, default='Reston')
+    location = models.CharField(max_length=40, choices=PARK_CHOICES, default='Cherry Blossum Tree, D.C.')
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200, default="anonymous")
     image = models.ImageField(upload_to='images', blank=True)
