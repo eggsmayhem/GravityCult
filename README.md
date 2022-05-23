@@ -2,6 +2,8 @@
 
 ## What is Gravity Cult?
 
+!['test'](https://github.com/eggsmayhem/GravityCult/blob/main/promotional/GCstonesnobacksmall.png)
+
 GC is an outdoor, International art-sharing app. Artists from around the world paint a rock, then place it and another rock with a QR code/link, and deploy these rocks respecfully in a public area--perhaps their favorite park!
 
 People who stumble upon and scan these rocks will be taken to the online home of Gravity Cult: an international artist collective that enables you to post art, poetry, or link to your online music or art, and state where you are from!
