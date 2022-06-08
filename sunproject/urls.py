@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', views.index),
     path('index/', views.index),
-    path('home/', views.home),
+    # path('home/', views.home),
+    path('', views.home),
     path('about/', views.about),
     path('map/', views.map),
 
