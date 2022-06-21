@@ -34,7 +34,7 @@ SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 
 #DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 
-DEBUG = os.environ.get('DEBUG_VALUE')
+DEBUG = os.environ.get('DEBUG_VALUE', '0') == '1'
 
 # Used the below with a debug = true in the .env file, but it was still being deployed in debug mode on heroku
 # DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
