@@ -147,7 +147,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #added white server 500 / debug=true debugging 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#commenting below out so every missing thing doesn't throw an error
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
