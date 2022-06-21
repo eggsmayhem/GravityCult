@@ -32,9 +32,9 @@ SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 
-DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
+#DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 
-#DEBUG = False 
+DEBUG = False 
 
 # Used the below with a debug = true in the .env file, but it was still being deployed in debug mode on heroku
 # DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
@@ -72,6 +72,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #adding Whitenoise after Server 500 error when setting debug to false
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'sunproject.urls'
@@ -168,3 +170,6 @@ AWS_DEFAULT_ACL = None
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 django_heroku.settings(locals())
+
+#enable errors to propogate on heroku logs
+#DEBUG_PROPOGATE_EXCEPTIONS = True
