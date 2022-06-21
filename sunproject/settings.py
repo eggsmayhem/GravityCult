@@ -34,7 +34,7 @@ SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 
 #DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 
-DEBUG = False 
+DEBUG = os.environ.get('DEBUG_VALUE')
 
 # Used the below with a debug = true in the .env file, but it was still being deployed in debug mode on heroku
 # DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
@@ -142,7 +142,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+#an extra / before static here might help?
 STATIC_URL = 'static/'
+
+#added white server 500 / debug=true debugging 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
