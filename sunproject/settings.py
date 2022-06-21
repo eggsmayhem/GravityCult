@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os 
+#Removed the below line as there was a "no module named django_heroku when I collected static"
 import django_heroku
 # added to load secret keys
 
