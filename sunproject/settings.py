@@ -144,7 +144,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 #an extra / before static here might help?
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 #added white server 500 / debug=true debugging 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
