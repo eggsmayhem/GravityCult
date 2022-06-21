@@ -13,7 +13,8 @@ def index(request):
             # Get the current instance object to display in the template
             #img_obj = form.instance
             #return render(request, 'index.html', {'form': form, 'img_obj': img_obj})
-            return redirect('/home')
+            #changed below from 'home' to '/', may need to be ''
+            return redirect('/')
     else:
         form = ImageForm()
     return render(request, 'index.html', {'form': form})
