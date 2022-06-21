@@ -23,6 +23,9 @@ load_dotenv()
 #BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+#added this below
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -144,8 +147,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-#an extra / before static here might help?
-STATIC_URL = '/static/'
 
 #added white server 500 / debug=true debugging 
 #commenting below out so every missing thing doesn't throw an error
@@ -164,9 +165,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 #STATIC_URL = '/static/'
 #STATIC_ROOT = BASE_DIR / 'media'
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 #The below might or might not be necessary
 #STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
+#an extra / before static here might help?
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'static'),
+]
+
 
 
 AWS_ACCES_KEY_ID = str(os.getenv('AWS_ACCES_KEY_ID'))
