@@ -34,7 +34,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
- DEBUG = True
+DEBUG = True
 
 #DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 #BELOW IS THE CURRENT ONE
