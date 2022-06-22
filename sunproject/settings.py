@@ -34,11 +34,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
+ DEBUG = True
 
 #DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
-
-DEBUG = os.environ.get('DEBUG_VALUE', '0') == '1'
+#BELOW IS THE CURRENT ONE
+#DEBUG = os.environ.get('DEBUG_VALUE', '0') == '1'
 
 # Used the below with a debug = true in the .env file, but it was still being deployed in debug mode on heroku
 # DEBUG = str(os.getenv('DJANGO_DEBUG', '')) != 'False'
@@ -171,9 +171,9 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 #STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
 #an extra / before static here might help?
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    os.path.join(PROJECT_ROOT, 'static'),
-]
+# STATICFILES_DIRS = [
+#     os.path.join(PROJECT_ROOT, 'static'),
+# ]
 
 
 
