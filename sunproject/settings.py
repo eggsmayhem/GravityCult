@@ -24,7 +24,21 @@ load_dotenv()
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 #added this below
-PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+#PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+#STATIC_URL = '/static/'
+#STATIC_ROOT = BASE_DIR / 'media'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_ROOT, 'staticfiles')
+#The below might or might not be necessary
+#STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
+#an extra / before static here might help?
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -34,8 +48,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+#DEBUG = True
+DEBUG = False
 #DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 #BELOW IS THE CURRENT ONE
 #DEBUG = os.environ.get('DEBUG_VALUE', '0') == '1'
@@ -162,18 +176,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 #added for ck
 
-#STATIC_URL = '/static/'
-#STATIC_ROOT = BASE_DIR / 'media'
-#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
-#The below might or might not be necessary
-#STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'static')]
-#an extra / before static here might help?
-STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     os.path.join(PROJECT_ROOT, 'static'),
-# ]
 
 
 
