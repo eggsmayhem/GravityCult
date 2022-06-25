@@ -49,7 +49,7 @@ STATICFILES_DIRS = [
 SECRET_KEY = str(os.getenv('DJANGO_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
-DEBUG = False
+DEBUG = True
 #DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 #BELOW IS THE CURRENT ONE
 #DEBUG = os.environ.get('DEBUG_VALUE', '0') == '1'
