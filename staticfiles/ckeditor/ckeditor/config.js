@@ -10,4 +10,4 @@ CKEDITOR.editorConfig = function( config ) {
 };
 
 //debugging invisible ckeditor 6_26_2022
-CKEDITOR.timestamp = '762DJ&&D';
+//CKEDITOR.timestamp = '762DJ&&D';
