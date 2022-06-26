@@ -8,3 +8,6 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 };
+
+//debugging invisible ckeditor 6_26_2022
+CKEDITOR.timestamp = '762DJ&&D';
