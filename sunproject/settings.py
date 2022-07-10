@@ -95,6 +95,13 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
+#enabling HTTPS force as heroku does not handle redirects in its routing
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True 
+
+#emd HTTPS force
+
 ROOT_URLCONF = 'sunproject.urls'
 
 TEMPLATES = [
